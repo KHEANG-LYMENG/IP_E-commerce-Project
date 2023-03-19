@@ -1,10 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an home page</h1>
-  </div>
+  <body>
+    
+  </body>
 </template>
 
 <style>
+*{
+  margin: 0;
+}
+body{
+  background-color: gainsboro;
+}
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
@@ -12,4 +18,5 @@
     align-items: center;
   }
 }
+
 </style>
