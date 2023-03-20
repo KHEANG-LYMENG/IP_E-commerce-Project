@@ -30,6 +30,8 @@ header {
 }
 
 .logo {
+  padding-left: 30px;
+  padding-right: 100px;
   width: 25px; 
   height: 25px; 
   border-radius: 10px;
@@ -37,11 +39,11 @@ header {
 
 nav {
   padding: 20px;
-  color: aliceblue;
+  color: rgb(30, 30, 109);
   background-color: grey;
   width: 100%;
-  font-size: 12px;
-  text-align: center;
+  font-size: 20px;
+  text-align: start;
 }
 
 nav a.router-link-exact-active {
@@ -53,6 +55,7 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
+  color: aliceblue;
   text-decoration: none;
   display: inline-block;
   padding: 0 1rem;
