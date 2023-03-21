@@ -1,17 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is checkout page</h1>
-    <br><br>
-    <button>cancel</button>
+  <div class="checkout">
+    <h1>This is an checkout page</h1>
+    <br />
+    <button @click="$emit('cancel')">Cancel</button>
   </div>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .about {
+  .checkout {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
   }
 }
 </style>

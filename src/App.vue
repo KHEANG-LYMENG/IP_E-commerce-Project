@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/product">Product</RouterLink>
           <RouterLink to="/checkout">checkout</RouterLink>
+          <input class="search" type="text" placeholder="search">
       </nav>
     <RouterView />
     </div>
@@ -24,11 +25,17 @@ import { RouterLink, RouterView } from 'vue-router'
 *{
   margin: 0;
 }
+.wrapper{
+  width: 100%;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
 }
-
+.search{
+  flex: 8;
+  padding: 10px;
+}
 .logo {
   padding-left: 30px;
   padding-right: 100px;
@@ -65,7 +72,7 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
+/* 
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -90,5 +97,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
