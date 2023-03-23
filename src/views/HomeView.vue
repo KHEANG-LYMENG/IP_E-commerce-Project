@@ -149,6 +149,10 @@
   height: 300px;
   border-radius: 10px;
 }
+.box:hover{
+  background-color: skyblue;
+  cursor: pointer;
+}
 .box>h2{
   text-align: center;
 }
