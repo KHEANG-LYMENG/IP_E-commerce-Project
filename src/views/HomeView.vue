@@ -150,7 +150,7 @@
   border-radius: 10px;
 }
 .box:hover{
-  background-color: skyblue;
+  background-color: grey;
   cursor: pointer;
 }
 .box>h2{
