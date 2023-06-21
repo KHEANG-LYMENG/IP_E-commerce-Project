@@ -4,42 +4,47 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <div class="wrapper">
-      <!--RouterLink use to route the page that you want it to go to-->
-      <nav>
-          <img class="logo" src="./assets/images/logo.png" alt="">
-          <router-link to="/">Home</router-link>
+    <!-- <div class="wrapper"> -->
+      <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <router-link to="/"><img class="logo" src="./assets/images/logo.png" alt=""></router-link>
+        </div>
+        <div>
+          <router-link to="/home">Home</router-link>
           <router-link to="/new">New</router-link>
           <router-link to="/bestsell">Best Sell</router-link>
           <router-link to="/discount">Discount</router-link>
+        </div>
+        <div>
           <span class="search"><input type="text" placeholder="search"></span>
           <router-link to="/cart">
-          <div class="cart">
-            <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5UlEQVR4nN2UsQ7BUBSGPwsGAxEziweQiGdQEpNX8QzSd5B0EJ7AKGG3moytCSPBQKXJGZpI6tzmVsKX3O075z+3PS38C08glONlEfCIBdyAGhmxiAWlPaukgJ6FgG1SQA7YiRiFaSkDR6kbfJJHIkaPS4srNWuNXAEusllNhd8AruK3tRN5MpGrcOfiTjGgJUUnoJjgdWTy6AZ1DNkYbM7YtHkVOCgaR5PPgIJpwEQaLGV1rVKS38VduUXG5IFzyq9YzVD5DsK0AZnTB/ZAADgWvDeC2LV9C973Axwp9oGuBe+HeQGdhY4nafPkOQAAAABJRU5ErkJggg==">
-            Cart (0)
+            <div class="cart">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5UlEQVR4nN2UsQ7BUBSGPwsGAxEziweQiGdQEpNX8QzSd5B0EJ7AKGG3moytCSPBQKXJGZpI6tzmVsKX3O075z+3PS38C08glONlEfCIBdyAGhmxiAWlPaukgJ6FgG1SQA7YiRiFaSkDR6kbfJJHIkaPS4srNWuNXAEusllNhd8AruK3tRN5MpGrcOfiTjGgJUUnoJjgdWTy6AZ1DNkYbM7YtHkVOCgaR5PPgIJpwEQaLGV1rVKS38VduUXG5IFzyq9YzVD5DsK0AZnTB/ZAADgWvDeC2LV9C973Axwp9oGuBe+HeQGdhY4nafPkOQAAAABJRU5ErkJggg==">
+              Cart(0)
             </div>
           </router-link>
+        </div>
       </nav>
-    </div>
+    <!-- </div> -->
   </header>
   <router-view/>
-  <footer>
-    
-  </footer>
+  <footer></footer>
 </template>
+
 
 <style scoped>
 *{
   margin: 0;
 }
 
-.wrapper{
-  width: 100%;
+header{
+  padding: 0;
+  width: 98%;
 }
-header {
+/* header {
   line-height: 1.5;
   max-height: 100vh;
-}
+} */
 .search{
   padding-left: 10rem;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is Discount clothes page</h1>
+    <h1>This is Discount clothes page under building</h1>
   </div>
 </template>
 
