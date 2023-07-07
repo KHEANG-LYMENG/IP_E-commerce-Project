@@ -17,26 +17,38 @@ const router = createRouter({
     {
       path: '/new',
       name: 'new',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/NewView.vue')
+      component: () => import('../views/New.vue')
     },
     {
       path: '/bestsell',
       name: 'bestsell',
-      component: () => import('../views/BestSellView.vue')
+      component: () => import('../views/BestSell.vue')
     },
     {
       path: '/discount',
       name: 'discount',
-      component: () => import('../views/DiscountView.vue')
+      component: () => import('../views/Discount.vue')
     },
     {
       path: '/cart',
       name: 'cart',
-      component: () => import('../views/CartView.vue')
-    }
+      component: () => import('../views/Cart.vue')
+    },
+    {
+      path: '/cart/checkout',
+      name: 'checkout',
+      component: () => import('../views/CheckoutForm.vue')
+    },
+    {
+      path: '/cart/checkout/shipping',
+      name: 'shipping',
+      component: () => import('../views/ShippingMethod.vue')
+    },
+    {
+      path: '/cart/checkout/payment',
+      name: 'payment',
+      component: () => import('../views/Payment.vue')
+    },
   ]
 })
 

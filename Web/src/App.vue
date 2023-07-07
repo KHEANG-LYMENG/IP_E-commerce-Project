@@ -1,71 +1,32 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Header from './components/NavBar.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <header>
-    <!-- <div class="wrapper"> -->
-      <nav style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <router-link to="/"><img class="logo" src="./assets/images/logo.png" alt=""></router-link>
-        </div>
-        <div>
-          <router-link to="/home">Home</router-link>
-          <router-link to="/new">New</router-link>
-          <router-link to="/bestsell">Best Sell</router-link>
-          <router-link to="/discount">Discount</router-link>
-        </div>
-        <div>
-          <span class="search"><input type="text" placeholder="search"></span>
-          <router-link to="/cart">
-            <div class="cart">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5UlEQVR4nN2UsQ7BUBSGPwsGAxEziweQiGdQEpNX8QzSd5B0EJ7AKGG3moytCSPBQKXJGZpI6tzmVsKX3O075z+3PS38C08glONlEfCIBdyAGhmxiAWlPaukgJ6FgG1SQA7YiRiFaSkDR6kbfJJHIkaPS4srNWuNXAEusllNhd8AruK3tRN5MpGrcOfiTjGgJUUnoJjgdWTy6AZ1DNkYbM7YtHkVOCgaR5PPgIJpwEQaLGV1rVKS38VduUXG5IFzyq9YzVD5DsK0AZnTB/ZAADgWvDeC2LV9C973Axwp9oGuBe+HeQGdhY4nafPkOQAAAABJRU5ErkJggg==">
-              Cart(0)
-            </div>
-          </router-link>
-        </div>
-      </nav>
-    <!-- </div> -->
-  </header>
-  <router-view/>
-  <footer></footer>
+  <Header></Header>
+  <RouterView />
+  <Footer></Footer>
 </template>
 
-
 <style scoped>
-*{
-  margin: 0;
-}
 
-header{
-  padding: 0;
-  width: 98%;
-}
 /* header {
   line-height: 1.5;
   max-height: 100vh;
-} */
-.search{
-  padding-left: 10rem;
 }
-.search input{
-  padding: 10px;
-}
+
 .logo {
-  padding-left: 50px;
-  padding-right: 100px;
-  width: 50px; 
-  height: 50px; 
-  border-radius: 10px;
+  display: block;
+  margin: 0 auto 2rem;
 }
 
 nav {
-  padding: 20px;
-  color: rgb(30, 30, 109);
-  background-color: grey;
   width: 100%;
-  font-size: 20px;
-  text-align: start;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -77,8 +38,6 @@ nav a.router-link-exact-active:hover {
 }
 
 nav a {
-  color: aliceblue;
-  text-decoration: none;
   display: inline-block;
   padding: 0 1rem;
   border-left: 1px solid var(--color-border);
@@ -88,7 +47,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
@@ -109,6 +68,7 @@ nav a:first-of-type {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
+
     padding: 1rem 0;
     margin-top: 1rem;
   }
