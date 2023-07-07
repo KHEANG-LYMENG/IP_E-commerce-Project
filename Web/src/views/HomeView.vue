@@ -1,25 +1,25 @@
 <template>
   <div style="padding-top: 30px;"></div>
   
-  <div class="wrapper">
+  <div class="container">
     <div class="feature-box">
       <div class="picture">
-        <img src="../assets/images/shirt/best.png" alt="">
+        <img src="https://th.bing.com/th/id/R.24b0625137dfcadc7e7733c0e6c523ca?rik=XiwqmNtQer8Wjg&pid=ImgRaw&r=0" alt="">
       </div>
       <div class="text">
         <h2>New T-Shirt</h2>
         <p>best nylon quality selected</p><br><br>
         <h2>Price : <span style="color: red;">$10:00</span></h2><br><br><br>
-        <button>Add to cart</button>
+        <button style="background-color: gray;">Add to cart</button>
       </div>
     </div>
     <div style="padding-top: 30px;"></div>
     <SignText title="Famous"></SignText>
   </div>
 
-  
+    <div class="container">
       <Card></Card>
-    
+    </div>
 </template>
 
 <script setup>
@@ -28,10 +28,10 @@
 </script>
 <style scroped>
 
-.wrapper{
+/* .wrapper{
     margin: auto;
     width: 90%;
-  }
+  } */
   .feature-box{
     box-shadow: 0 0 30px ;
     align-content: center;
@@ -43,6 +43,10 @@
   }
   .text{
     padding: 40px;
+  }
+  .text button:hover{
+    background-color: blue;
+    color: white;
   }
   .picture{
     width: 50%;

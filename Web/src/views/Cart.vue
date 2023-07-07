@@ -1,7 +1,7 @@
 <template>
   <div style="padding-top: 30px;"></div>
 <section class="h-100 h-custom" style="background-color: rgb(197, 195, 195);">
-  <div class=" py-5 h-100"> <!--container must be here-->
+  <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">

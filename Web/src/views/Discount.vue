@@ -1,9 +1,9 @@
 <template>
   <div style="padding-top: 30px;"></div>
-  <!-- <div class="container"> -->
+  <div class="container">
     <SignText title="DISCOUNT"></SignText>
     <card></card>
-  <!-- </div> -->
+  </div>
 </template>
 
 <script setup>

@@ -5,7 +5,7 @@
     <div style="padding-top: 30px;"></div>
     <div class="padding-top"></div>
 
-    <!-- <div class="container"> -->
+    <div class="container">
 
       <div class="feature-box-landing-comment">
         <div class="text-landing-comment">
@@ -37,13 +37,11 @@
           <img src="../assets/images/heroesPic/eddison.jpg" alt="">
         </div>
       </div>
-    <!-- </div> -->
+    </div>
 </template>
 
 <script setup>
-  import Card from '../components/Card.vue'
   import HeroCard from '../components/Heroes.vue'
-  import SignText from '../components/SignText.vue'
   import Carousel from '../components/Carousel.vue'
 </script>
 <style scroped>
