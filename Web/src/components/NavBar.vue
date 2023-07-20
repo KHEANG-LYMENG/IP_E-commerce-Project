@@ -24,12 +24,12 @@
           </ul>
         </div>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <form class="d-flex me-auto">
+          <!-- <form class="d-flex me-auto">
             <div class="input-group">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn input-group-text" type="submit"><i class="fas fa-search text-white"></i></button>
             </div>
-          </form>
+          </form> -->
           <li class="nav-item">
             <a>
                 <router-link to="/cart" class="nav-link">
