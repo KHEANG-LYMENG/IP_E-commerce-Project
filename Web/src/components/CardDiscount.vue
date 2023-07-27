@@ -4,7 +4,7 @@
         <div v-for="item in filteredItems" :key="item.id">
           <div class="card">
             <div class="card-img-zoom">
-              <img :src="item.image" class="card-img-top" alt="...">
+              <img :src="`http://localhost:3000${item.image}`" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
               <h5 class="card-title text-center">{{ item.title }}</h5>
@@ -23,24 +23,29 @@
   </template>
   
   <script>
-  import { items } from '../init-data';
+  import axios from 'axios';
   export default {
-    name:'card',
-    props: {
-    search: String,
-  },
-  computed: {
-    filteredItems() {
-      if (!this.search) return this.items;
-      return this.items.filter(item =>
-        item.title.toLowerCase().includes(this.search.toLowerCase())
-      );
-  },
-},
+      name:'card',
+      props: {
+      search: String,
+    },
+    computed: {
+      filteredItems() {
+        if (!this.search) return this.items;
+        return this.items.filter(item =>
+          item.title.toLowerCase().includes(this.search.toLowerCase())
+        );
+      },
+    },
     data() {
       return {
-        items,
+        items: [],
       }
+    },
+    async created() {
+      const result = await axios.get('http://localhost:3000/api/products');
+      const items = result.data;
+      this.items = items;
     }
   }
   </script>

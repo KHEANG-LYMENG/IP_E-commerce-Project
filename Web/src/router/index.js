@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFoundPage from '../views/NotFoundPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -53,6 +54,11 @@ const router = createRouter({
       path: '/cart/checkout/payment',
       name: 'payment',
       component: () => import('../views/Payment.vue')
+    },
+   
+    {
+      path: '/*',
+      component: NotFoundPage,
     },
   ]
 })

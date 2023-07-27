@@ -35,7 +35,7 @@
                 <router-link to="/cart" class="nav-link">
                     Cart
                     <i class="fas fa-shopping-cart"></i> 
-                    <span class="badge text-white">3</span>
+                    <span class="badge text-white">({{ totalItem }})</span>
                 </router-link>
             </a>
           </li>
@@ -45,7 +45,29 @@
     <div></div>
 </template>
   
-<script setup>
+<script>
+import axios from 'axios';
+export default {
+  name: 'cartPage',
+  data() {
+    return {
+      cartItems: [], 
+    }
+  },
+  async created() {
+    const result = await axios.get('http://localhost:3000/api/users/12345/cart');
+    const cartItems = result.data;
+    this.cartItems = cartItems;
+  },
+  computed: {
+    
+    totalItem() {
+      return this.cartItems.reduce(
+        (count, _) => count + 1,0,
+      );
+    }
+  }
+}
 </script>
 
 <style scoped>

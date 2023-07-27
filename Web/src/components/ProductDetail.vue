@@ -10,7 +10,7 @@
                                 
                                 <div class="preview-pic tab-content">
                                     <div class="tab-pane active" id="pic-1">
-                                        <img v-bind:src="item.image" />
+                                        <img :src="`http://localhost:3000${item.image}`" style="width: 80%; height: 400px;" />
                                     </div>
                                 </div>
                                 
@@ -43,7 +43,15 @@
                                     <span class="color blue"></span>
                                 </h5> -->
                                 <div class="action">
-                                    <button class="add-to-cart btn btn-default" type="button">add to cart</button>&nbsp;
+                                    <button class="add-to-cart btn btn-default" type="button"
+                                    v-if="!showSuccessMessage"
+                                      v-on:click="addToCart"
+                                    >
+                                    add to cart</button>&nbsp;
+                                    <button class="btn btn-success" type="button"
+                                    v-if="showSuccessMessage"
+                                    >
+                                    Proceed to Cart Success</button>&nbsp;
                                     <button @click="toggleColor" :class="{ red: isRed }"><span class="fa fa-heart"></span></button>
                                 </div>
                             </div>
@@ -56,22 +64,40 @@
 </template>
 
 <script>
+import axios from 'axios';
 import { ref } from 'vue';
-import { items } from '../init-data';
+// import { items } from '../init-data';
 export default {
     name: "ProductDetailPage",
     data() {
         return {
-            item: items.find((p) => p.id == this.$route.params.id),
+          item: {},
+          showSuccessMessage: false,
         };
     },
     setup() {
-    const isRed = ref(false);
-    const toggleColor = () => {
-      isRed.value = !isRed.value;
-    };
-    return { isRed, toggleColor };
-  },
+      const isRed = ref(false);
+      const toggleColor = () => {
+        isRed.value = !isRed.value;
+      };
+      return { isRed, toggleColor };
+    },
+    methods: {
+      async addToCart() {
+        await axios.post('http://localhost:3000/api/users/12345/cart', {
+          productId: this.$route.params.id,
+        });
+        this.showSuccessMessage = true;
+        setTimeout(() => {
+          this.$router.push('/home');
+        }, 1500);
+      },
+    },
+    async created() {
+      const result = await axios.get(`http://localhost:3000/api/products/${this.$route.params.id}`);
+      const item = result.data;
+      this.item = item;
+    }
 }
 </script>
 
