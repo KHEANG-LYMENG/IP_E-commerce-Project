@@ -114,7 +114,7 @@
         </div>
 
       
-        
+  
 
         <div class="d-flex justify-content-between pt-5">
             <h6 class="mb-0">
@@ -124,7 +124,7 @@
                     </a>
                 </router-link>
             </h6>
-            <router-link to="/">
+            <router-link to="/thank">
                 <button class="btn btn-primary btn-lg" type="submit">Complete Order</button>
             </router-link>
         </div>
